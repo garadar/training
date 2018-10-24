@@ -2,6 +2,11 @@ ls: list directory
 mkdir: create repository
 cd: change directory
 cp: copy
+grep: faire une recherche dans un fichier
+sed: edition trop stylé
+find: trouver un fichier
+
+
 
 echo toto: affiche toto sur la sortie standard
 echo toto > test: redirige la sortie de toto dans le fichier test ( en écrasant tout ce qu'il y avait)
@@ -17,3 +22,25 @@ git status: status du git
 git add: ajoute un fichier au commit
 git commit -m: commit -m "message du commit"
 git push origin master: "envoie le/les commit sur depot git"
+git pull: récuperer les dernière modification
+
+
+
+$(<commande>): execution commande en sous shell
+$((<operation>)) : faire une operation mathématique
+
+a=$(<commande>)
+
+
+if [[ <test> ]]
+then
+  <exécution>
+fi
+
+
+
+for i in <test>
+do
+  <execution>
+done
+
