@@ -1,3 +1,4 @@
+
 #!/bin/bash
 
 #A quoi sert ce truc sur la ligne du dessus?
@@ -61,7 +62,7 @@ add(){
   b=$2
   #/*FIXME*/#
 
-}
+}echo $((1+2))
 
 
 
@@ -73,7 +74,7 @@ power(){
 
   #/*FIXME*/
 
-}
+}echo $((1^2))
 
 #Exercice factoriel
 #nom du script: fact
@@ -85,7 +86,7 @@ fact(){
   n=$1
   #/*FIXME*/
 
-}
+}echo $(./fact 1)
 
 echo 5+6=
 add 5 6 
