@@ -60,9 +60,8 @@ add(){
 
   a=$1
   b=$2
-  #/*FIXME*/#
-
-}echo $((1+2))
+  echo $(($a+$b))
+}
 
 
 
@@ -74,7 +73,7 @@ power(){
 
   #/*FIXME*/
 
-}echo $((1^2))
+}
 
 #Exercice factoriel
 #nom du script: fact
@@ -86,10 +85,10 @@ fact(){
   n=$1
   #/*FIXME*/
 
-}echo $(./fact 1)
+}
 
 echo 5+6=
-add 5 6 
+add $1 $2 
 echo fact 5=
 fact 5
 
