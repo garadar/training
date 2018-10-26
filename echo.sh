@@ -5,7 +5,7 @@
 echo argument passé en script: $1
 
 arg(){
- echo 'argument passé dans le script $1': $1
+ echo 'argument passé dans la fonction $1': $1
 }
 
 
