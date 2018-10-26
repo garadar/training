@@ -1,0 +1,20 @@
+le fichier friends contient des noms séparés par des tabulations
+
+
+1) pour une simplicité de traitement nous avons besoin d'afficher seulement 1 nom par lignes
+
+commande autorisé:
+sed,awk,echo,tr,cat,sort,grep
+
+2) on veut maintenant afficher seulement les noms dans la premiere colone
+commande autorisé:
+sed,awk,echo,tr,cat,sort,grep
+
+3) En reprenant la consigne 1 et en triant on se rend compte qu'il y a des doublons --' (smashed that fuckink noob)
+suprimmer les!
+commande autorisé:
+sed,awk,echo,tr,cat,sort,grep
+
+4)seul les noms commençant par nous interesses et finissant par k ou c
+commande autorisé
+sed,awk,echo,tr,cat,grep,sort
