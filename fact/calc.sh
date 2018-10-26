@@ -60,7 +60,7 @@ add(){
 
   a=$1
   b=$2
-  echo $(($a+$b))
+  echo $a+$b= $(($a+$b)) 
 }
 
 
@@ -70,9 +70,9 @@ add(){
 power(){
   a=$1
   b=$2
-
-  #/*FIXME*/
-
+if [
+   then
+   fi
 }
 
 #Exercice factoriel
@@ -87,8 +87,8 @@ fact(){
 
 }
 
-echo 5+6=
-add $1 $2 
+add $1 $2
+power $1 $2
 echo fact 5=
 fact 5
 
