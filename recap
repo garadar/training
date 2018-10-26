@@ -32,15 +32,93 @@ $((<operation>)) : faire une operation mathématique
 a=$(<commande>)
 
 
+
+
+######
+#algo#
+######
+En développement, on a souvent besoin de faire des tests
+si 'il fait beau' alors je prend un short sinon je prend un parapluie
+
+si a<0 alors nbr positif sinon nbr negatif ou nul
+
+
 if [[ <test> ]]
 then
   <exécution>
+
+else
+  <execution>
 fi
 
-
+pour tout occurence de '...' j'éxécute '...'
 
 for i in <test>
 do
   <execution>
 done
+
+
+
+tant que la condition est rempli je fais ça:
+
+while <test>
+do
+ <execution>
+done
+
+
+
+les fonctions:
+Une fonction est un morceau de code qui a pour but dêtre exécuter de nombreuse fois,
+le développeur étant feignant on le code une fois et c'est tout.
+
+en bash:
+
+add(){
+
+<execution>
+}
+
+*add est le nom de la fonction { et } marque le début et la fin de la fonction,
+ à achaque appel de cette fonction le code entre { et } sera exécuté.
+ chaque varibale initialiser dans les fonctions sont détruites a la fin de la fonction
+ en dehors d'une fonction en bash $1,$2...$n désigne l'argument passé au scripte
+
+exemple:
+
+./calc.sh toto tata
+
+
+ici $1=toto et $2=tata 
+il est donc facile de manipuler ces valeurs dans ce script
+
+
+* dans une fonction $1,$2..$n désigne les argument passé à la fonction (cf echo.sh)
+
+
+
+interprétation des variables:
+
+pour utiliser une variable on se sert du symbole '$'
+exemple:
+
+a=36
+echo $a (affiche 36 sur stdout)
+
+echo "j'affiche la valeur contenue dans \$a en mettant des doubles quotes"
+echo 'j'affiche litéralement $a sans interprétation en mettant des simples quotes'
+
+
+
+
+
+
+
+
+
+
+
+
+  
 
