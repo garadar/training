@@ -70,9 +70,16 @@ add(){
 power(){
   a=$1
   b=$2
-if [
-   then
-   fi
+
+res=1
+while [ $b -gt 0 ]
+do
+  res=$(($res*$a))
+  b=$(($b-1))
+done
+
+echo $1^$2 = $res
+
 }
 
 #Exercice factoriel
