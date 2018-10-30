@@ -88,16 +88,35 @@ echo $1^$2 = $res
 
 
 fact(){
-  n=$1
-  #/*FIXME*/
+n=$1
+res=1
+while [ $n -gt 0 ]
+do
+  res=$(($res*$n))
+  n=$(($n-1))
+done
+
+echo fact $1 = $res
 
 }
+
+rec_fact(){
+n=$1
+if [ $n -eq 1 ] || [ $n -eq 0 ]
+then
+  echo 1 
+else
+  echo $(($n*$(rec_fact $((n-1)))))
+fi
+
+}
+
 
 add $1 $2
 power $1 $2
 echo fact 5=
-fact 5
-
+fact $1 
+rec_fact $1
 
 
 
