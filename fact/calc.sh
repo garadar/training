@@ -112,12 +112,26 @@ fi
 }
 
 
+rec_fibo(){
+n=$1
+if [ $n -eq 0 ]
+then
+ echo 0
+elif [ $n -eq 1 ]
+then 
+  echo 1
+else
+ echo $(($(rec_fibo $(($n-1))) + $(rec_fibo $(($n-2)))))
+fi
+}
+
+
 add $1 $2
 power $1 $2
 echo fact 5=
 fact $1 
 rec_fact $1
-
+rec_fibo $1
 
 
 
