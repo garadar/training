@@ -5,7 +5,7 @@ cp: copy
 grep: faire une recherche dans un fichier
 sed: edition trop stylé
 find: trouver un fichier
-
+mv: rename un fichier:- mv oldnamefile newnamefile
 
 
 echo toto: affiche toto sur la sortie standard
