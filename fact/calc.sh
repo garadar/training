@@ -128,7 +128,6 @@ fi
 
 add $1 $2
 power $1 $2
-echo fact 5=
 fact $1 
 rec_fact $1
 rec_fibo $1
