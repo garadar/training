@@ -1,15 +1,15 @@
 #Makefile cours1
-CC=colorgcc
+CC=gcc
 CFLAGS= -Werror -Wall -Wextra -pedantic -std=c99 -g3
-SRC= ./src/cours1.c
+SRC= ./src/solution.c
 OBJ= $(SRC:.c=.o)
 
 
 all: main
 
 #link .o with lib.so
-main: ./src/main.o libcours1.so
-	 -g3 -o bin -L. ./src/main.o -lcours1
+main:   $(SRC)
+	$(CC) $(CFLAGS) $(SRC) -g3 -o bin 
 
 libcours1.so: CFLAGS += -fPIC
 
@@ -24,5 +24,5 @@ debug: ./src/main.o
 check:
 	./tests/check.sh
 clean:
-	 ./src/*.o *.swp bin libcours1.so
+	 rm -rf ./src/*.o *.swp bin libcours1.so
 
