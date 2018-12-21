@@ -1,7 +1,7 @@
 #Makefile cours1
 CC=gcc
 CFLAGS= -Werror -Wall -Wextra -pedantic -std=c99 -g3
-SRC= ./src/solution.c
+SRC= ./src/list.c
 OBJ= $(SRC:.c=.o)
 
 
@@ -24,5 +24,5 @@ debug: ./src/main.o
 check:
 	./tests/check.sh
 clean:
-	 rm -rf ./src/*.o *.swp bin libcours1.so
+	 rm -rf ./src/*.o *.swp bin  *.out libcours1.so
 
