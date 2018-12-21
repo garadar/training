@@ -15,6 +15,9 @@ void add_list(struct List *list, int n){
 /* FIXME */
 }
 
+int search_elt(struct List * list, int n){
+/* FIXME */
+}
 
 
 int main(int argc, char *argv[]){
