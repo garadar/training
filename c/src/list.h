@@ -70,9 +70,9 @@ struct List *add_list(struct List *list, int n);
 /* Cette fonction renvoie 0 si l'élément n est présent dans la liste sinon 0, et affiche un commentaire selon le resultat */
 int search_elt(struct List *list, int n);
 
-struct List *erase_elt(struct List list, int n);
+struct List *erase_elt(struct List *list, int n);
 
-struct List sort_list(struct List list);
+struct List *sort_list(struct List *list);
 
 
 
