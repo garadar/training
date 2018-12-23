@@ -15,9 +15,9 @@ la sructure List est donc comme un élément a part entière qui contient des so
 
 struct List *list:
 
-      -----
- --> |data |--> 4
-     |-----|
+ list -----
+ --> |data |---4
+ aux |-----|
      |next |-->  -----
       -----     |data |--> 2
                 |-----
@@ -40,8 +40,18 @@ Vu que les pointeurs touchent à la memoire on va devoir utiliser malloc( paix �
 malloc permet d'allouer de la memoire (Memory ALLOCation)
 et s'emploie comme ça:
 
-struct <struct_name> *<name> = malloc(sizeof(<struct_name>)):
-struct voiture *nissan = malloc(sizeof(voiture));
+
+struct List *list = malloc(sizeof(list));
+struct List *aux = list;
+//parcours ta list aux jusqu'a NULL
+while(aux != NULL){
+  aux = aux->next;
+]
+
+
+
+struct <struct_name> *<name> = malloc(sizeof(<name>)):
+struct voiture *nissan = malloc(sizeof(nissan));
 
 traduction:
 je créér un poineur de structure voiture appelé nissan. j'alloue donc la taille (sizeof()) de la structure voiture.
@@ -67,7 +77,7 @@ void print_list(struct List *list);
 /* Cette fonction insère en fin de la list 'list' l'entier n */
 struct List *add_list(struct List *list, int n);
 
-/* Cette fonction renvoie 0 si l'élément n est présent dans la liste sinon 0, et affiche un commentaire selon le resultat */
+/* Cette fonction renvoie 0 si l'élément n est présent dans la liste sinon 1, et affiche un commentaire selon le resultat */
 int search_elt(struct List *list, int n);
 
 struct List *erase_elt(struct List *list, int n);
