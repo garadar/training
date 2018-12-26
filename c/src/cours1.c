@@ -42,7 +42,7 @@ void print_char(char c){
 
 void print_string(char *s){
 
-  printf("string = %d\n", *s);
+  printf("string = %s\n", s);
 }
  
 
@@ -50,8 +50,8 @@ int main(int argc, char *argv[]){
 
 
 int x = atoi(argv[1]);
-char y = atoi(argv[1]);
-char *s = atoi(*argv[1]);
+char y = 'c';
+char * s = argv[1];
 //printf("argc = %d\n",argc);
 print_arg(argc,argv);
 print_int(x);
@@ -59,7 +59,7 @@ int res = sum(x,atoi(argv[2]));
 //int res = power(x,atoi(argv[2]));(j'ai mis // en attendant une solution)
 print_int(res);
 print_char(y);
-print_string(*s);
+print_string(s);
 
 return 0;
 }
