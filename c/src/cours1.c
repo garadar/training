@@ -18,7 +18,7 @@ void print_arg(int nb_arg, char *argv[]){
 
 void print_int(int n){
 
-  printf("n = %d\n", n);
+  printf("entier = %d\n", n);
 }
 	
 
@@ -29,8 +29,17 @@ int sum(int a, int b){
 
 
 int power(int a, int b){
+if(b == 0)
+  return 0;
 
-  return a ^ b;	
+int res = a;
+  for(int i = 1; i < b; i++){
+
+    res = res * a;
+
+  }
+
+  return res;	
 }
 
 
@@ -55,8 +64,10 @@ char * s = argv[1];
 //printf("argc = %d\n",argc);
 print_arg(argc,argv);
 print_int(x);
+
 int res = sum(x,atoi(argv[2]));
-//int res = power(x,atoi(argv[2]));(j'ai mis // en attendant une solution)
+res = power(x,atoi(argv[2])); //(j'ai mis  en attendant une solution)
+
 print_int(res);
 print_char(y);
 print_string(s);
