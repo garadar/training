@@ -57,7 +57,7 @@ void print_string(char *s){
 
 int main(int argc, char *argv[]){
 
-
+printf("J'aime les licornes \n");
 int x = atoi(argv[1]);
 char y = 'c';
 char * s = argv[1];
