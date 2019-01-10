@@ -7,7 +7,7 @@ struct List *l = malloc(sizeof(l));
    l->data=d; 
    l->next=NULL;
 
-   return 0;
+   return l;
 }
 
 
@@ -15,22 +15,34 @@ struct List *l = malloc(sizeof(l));
 void print_list(struct List *l){
 
    if (l == NULL)
-   
-   return NULL;
+   {
+   return;
+   }
+
 
    while (l != NULL)
    {
-	   printf("%s -> ", l);
+	   printf("%d -> ", l->data );
+	   l = l->next;
    }
    printf("NULL\n");
-   
 
 }
 
 
-//void add_list(struct List *l, int n){
-/* FIXME */
-//}
+void add_list(struct List *l, int n){
+
+
+struct List *test = malloc(sizeof(test));
+ 
+  if (l == NULL || test == NULL)
+  {
+  return;
+  }
+  test->data=n;
+  test->next=l;
+
+}
 
 //int search_elt(struct List * l, int n){
 /* FIXME */
@@ -40,13 +52,13 @@ void print_list(struct List *l){
 int main(int argc, char *argv[]){
 argc=argc;
 argv=argv;
-struct List *test = create_list(1);
-print_list(test);
-//add_list(test,2);
-//add_list(test,6);
-//add_list(test,3);
-//add_list(test,9);
-test=test;
+struct List *l = create_list(8);
+add_list(l,2);
+add_list(l,6);
+add_list(l,3);
+add_list(l,9);
+print_list(l);
+
 
 return 0;
 }
