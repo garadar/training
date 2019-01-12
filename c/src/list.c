@@ -33,9 +33,9 @@ void print_list(struct List *l){
 void add_list(struct List *l, int n){
 
 
-struct List *test = malloc(sizeof(test));
+struct List *test = malloc(sizeof(test)); #pas le droit au malloc, utilise ce que tu as déjà fais
  
-  if (l == NULL || test == NULL)
+  if (l == NULL || test == NULL)#ici c est pas bon
   {
   return;
   }
